@@ -23,8 +23,8 @@ const personalMoveiB = { // main object
 
 function rememberMyFilms() {   // asks you question and you have to answer 'yes', without empty lane and it cant be longer than 50 characters
     for(let i = 0; i < 2; i++) {
-        const a = prompt("One of the last watched films ? ", ''),
-              b = prompt("How would you rate it ?", '');
+        const a = prompt("One of the last watched films ? ", '').trim(),
+              b = prompt("How would you rate it ?", '').trim();
     
               if(a != null && b != null && a != ' ' && b != ' ' && a.length < 50 && b.length < 50 ) { // checking if the input from user is not a 'no'(null), not an empty srting and its not longer than 50 letters
                 personalMoveiB.movies[a] = b;  // makes object with a rate as a child
